@@ -20,9 +20,14 @@ export const BlogsList = () => {
   if (!blogs) return null;
 
   return (
-    <section className="grid grid-cols-1 gap-10 768:grid-cols-2 1024:grid-cols-3">
+    <section className="flex flex-wrap gap-10">
       {blogs.map((blog) => (
-        <BlogCard key={blog.title} blog={blog} />
+        <div
+          key={blog.title}
+          className="w-full 768:basis-[calc((100%-40px)/2)] 1024:basis-[calc((100%-80px)/3)]"
+        >
+          <BlogCard blog={blog} />
+        </div>
       ))}
     </section>
   );
