@@ -100,7 +100,7 @@ export const MobileNavigationItem: React.FC<MobileNavigationItemProps> = ({
         <Link
           key={navigationItem.id}
           href={"#"}
-          className="hover:text-primary-hover cursor-pointer py-4 font-medium text-primary"
+          className="hover:text-primary-hover block cursor-pointer py-4 font-medium text-primary"
         >
           {navigationItem.title}
         </Link>
