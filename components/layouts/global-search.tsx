@@ -2,6 +2,7 @@
 
 import { useQueryState } from "nuqs";
 import { ArrowLeft, Search } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 type GlobalSearchProps = {
   isActive: boolean;
@@ -16,6 +17,14 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
     defaultValue: "",
     clearOnDefault: true,
   });
+
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (isActive && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isActive]);
 
   return (
     <>
@@ -33,6 +42,7 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
               className="absolute left-3 top-1/2 size-5 -translate-y-1/2"
             />
             <input
+              ref={inputRef}
               type="search"
               value={searchParams}
               onChange={(e) => setSearchParams(e.target.value)}
