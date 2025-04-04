@@ -1,0 +1,20 @@
+{
+  "layout": {
+    "header": {
+      "navigation": {
+        "demos": "Demos",
+        "post": "Post",
+        "features": "Features",
+        "categories": "Categories",
+        "shop": "Shop",
+        "buy-now": "Buy Now"
+      }
+    }
+  },
+
+  "blogs": {
+    "card": {
+      "views": "{count} {count, plural, one {View} other {Views}}"
+    }
+  }
+}

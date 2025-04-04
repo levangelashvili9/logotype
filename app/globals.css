@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer utilities {
+  .root-container {
+    @apply px-4 768:px-9 1024:px-20 1440:mx-auto 1440:w-[72.5rem] 1440:px-0;
+  }
+}
